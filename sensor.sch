@@ -12988,6 +12988,9 @@ or will meet your specific requirements.&lt;p&gt;
 <part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="2k"/>
 <part name="EXP_UART" library="SparkFun-Connectors" deviceset="M04" device="LOCK"/>
 <part name="EXP_I2C" library="SparkFun-Connectors" deviceset="M04" device="LOCK"/>
+<part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="0.1uf"/>
+<part name="SUPPLY18" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
+<part name="GND11" library="SparkFun" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13030,7 +13033,7 @@ or will meet your specific requirements.&lt;p&gt;
 <instance part="GND15" gate="1" x="106.68" y="119.38"/>
 <instance part="LOGO1" gate="G$1" x="165.1" y="12.7"/>
 <instance part="PIR" gate="G$1" x="5.08" y="58.42"/>
-<instance part="GND4" gate="1" x="22.86" y="50.8"/>
+<instance part="GND4" gate="1" x="22.86" y="48.26"/>
 <instance part="JP2" gate="G$1" x="43.18" y="91.44"/>
 <instance part="S1" gate="G$1" x="109.22" y="12.7"/>
 <instance part="GND6" gate="1" x="116.84" y="5.08"/>
@@ -13058,12 +13061,15 @@ or will meet your specific requirements.&lt;p&gt;
 <instance part="C9" gate="G$1" x="106.68" y="58.42"/>
 <instance part="Y1" gate="G$1" x="96.52" y="60.96"/>
 <instance part="SUPPLY4" gate="G$1" x="15.24" y="99.06"/>
-<instance part="SUPPLY17" gate="G$1" x="22.86" y="63.5"/>
+<instance part="SUPPLY17" gate="G$1" x="22.86" y="66.04"/>
 <instance part="LED2" gate="D1" x="38.1" y="22.86" rot="R180"/>
 <instance part="GND1" gate="1" x="63.5" y="12.7"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="EXP_UART" gate="G$1" x="157.48" y="88.9"/>
 <instance part="EXP_I2C" gate="G$1" x="157.48" y="71.12"/>
+<instance part="C6" gate="G$1" x="27.94" y="55.88"/>
+<instance part="SUPPLY18" gate="G$1" x="27.94" y="66.04"/>
+<instance part="GND11" gate="1" x="27.94" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -13163,7 +13169,7 @@ or will meet your specific requirements.&lt;p&gt;
 <segment>
 <pinref part="PIR" gate="G$1" pin="3"/>
 <wire x1="22.86" y1="60.96" x2="12.7" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="22.86" y1="60.96" x2="22.86" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="60.96" x2="22.86" y2="66.04" width="0.1524" layer="91"/>
 <label x="15.24" y="60.96" size="1.778" layer="95"/>
 <pinref part="SUPPLY17" gate="G$1" pin="3.3V"/>
 </segment>
@@ -13176,6 +13182,11 @@ or will meet your specific requirements.&lt;p&gt;
 <pinref part="EXP_I2C" gate="G$1" pin="4"/>
 <wire x1="162.56" y1="76.2" x2="180.34" y2="76.2" width="0.1524" layer="91"/>
 <label x="165.1" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="SUPPLY18" gate="G$1" pin="3.3V"/>
+<wire x1="27.94" y1="60.96" x2="27.94" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -13207,7 +13218,7 @@ or will meet your specific requirements.&lt;p&gt;
 <pinref part="PIR" gate="G$1" pin="1"/>
 <wire x1="12.7" y1="55.88" x2="22.86" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="22.86" y1="55.88" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="55.88" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
 <label x="15.24" y="55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -13295,6 +13306,11 @@ or will meet your specific requirements.&lt;p&gt;
 <pinref part="EXP_I2C" gate="G$1" pin="3"/>
 <wire x1="180.34" y1="73.66" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
 <label x="165.1" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="GND11" gate="1" pin="GND"/>
+<wire x1="27.94" y1="53.34" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TX" class="0">
